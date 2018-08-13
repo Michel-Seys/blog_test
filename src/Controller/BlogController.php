@@ -50,10 +50,6 @@ class BlogController extends AbstractController
             $article = new Article();
         }
 
-        
-
-
-
         //$form = $this->createFormBuilder($article)
         //            ->add('title')
         //            ->add('content')
@@ -78,7 +74,7 @@ class BlogController extends AbstractController
 
 
 
-        return $this->render('blog/create.html.twig',[
+        return $this->render('blog/create.html.twig', [
             'formArticle' => $form->createView(),
             'editMode' => $article->getId() !== null 
         ]);
